@@ -1,0 +1,175 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <app-header></app-header>
+    <!-- Main Content Start-->
+    <main class="main-content" [@animationIn] [@animationChildIn]>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="left-content">
+                    <div class="boxes">
+                        <div class="row">
+                            <div class="col-6 col-sm-4 col-md">
+                                <a href="#" title="Overview" class="link-box animation-target light-purple">
+                                    <img src="./assets/images/ic-overview.svg" alt="Overview">
+                                    <span>Overview</span>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md">
+                                <a href="#" title="Videos" class="link-box animation-target light-snow">
+                                    <img src="./assets/images/ic-videos.svg" alt="Videos">
+                                    <span>Videos</span>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md">
+                                <a href="#" title="WIP" class="link-box animation-target light-lace">
+                                    <img src="./assets/images/ic-wip.svg" alt="WIP">
+                                    <span>WIP</span>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md">
+                                <a href="#" title="For Sale" class="link-box animation-target light-frost">
+                                    <img src="./assets/images/ic-for-sale.svg" alt="For Sale">
+                                    <span>For Sale</span>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md">
+                                <a href="#" title="Boosted" class="link-box animation-target light-coconut">
+                                    <img src="./assets/images/ic-boosted.svg" alt="Boosted">
+                                    <span>Boosted</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="primary-box animation-fadeIn">
+                        <div class="top-box pb-36">
+                            <div class="content">
+                                <h4 class="pb-0">Daily Visitors</h4>
+                                <span class="text-grey">Today vs Yesterday</span>
+                            </div>
+                            <div class="row ms-auto">
+                                <div class="col">
+                                    <div class="chart-legend">
+                                        <span class="blue-bg"></span>
+                                        <em>Yesterday</em>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="chart-legend">
+                                        <span class="yellow-bg"></span>
+                                        <em>Today</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="./assets/images/daily-visitors.jpg" alt="Daily Visitors" class="img-fluid">
+                    </div>
+
+                    <h4 class="pb-0 animation-fadeIn" data-id="1">Past Orders</h4>
+                    <span class="text-grey pb-2 animation-fadeIn" data-id="2">Orders that are Delivered</span>
+                    <!-- Data Table Start -->
+                    <div class="table-responsive animation-fadeIn">
+                        <table mat-table [dataSource]="dataSource">
+                            <ng-container matColumnDef="orderId">
+                                <th mat-header-cell *matHeaderCellDef> Order ID </th>
+                                <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="orderDescription">
+                                <th mat-header-cell *matHeaderCellDef> Order Description </th>
+                                <td mat-cell *matCellDef="let element"> {{element.orderDescription}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="quantity">
+                                <th mat-header-cell *matHeaderCellDef class="text-center"> Quantity </th>
+                                <td mat-cell *matCellDef="let element" class="text-center"> {{element.quantity}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="orderDate">
+                                <th mat-header-cell *matHeaderCellDef class="text-center"> Order Date </th>
+                                <td mat-cell *matCellDef="let element" class="text-center"> {{element.orderDate}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="actions">
+                                <th mat-header-cell *matHeaderCellDef class="text-center">Actions</th>
+                                <td mat-cell *matCellDef="let element" class="text-center">
+                                    <button mat-button [matMenuTriggerFor]="actionMenu">
+                                        <img src="./assets/images/ic-action.svg" alt="Action">
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" xPosition="before">
+                                        <button mat-menu-item>Action 1</button>
+                                        <button mat-menu-item>Action 2</button>
+                                        <button mat-menu-item>Action 3</button>
+                                    </mat-menu>
+                                </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                    <!-- Data Table End -->
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="right-content">
+                    <div class="top-box pb-1 animation-fadeIn">
+                        <h4 class="pb-0">Monthly Visitors</h4>
+                        <button mat-button [matMenuTriggerFor]="filterMenu" class="filter-dropdown  ms-auto">
+                            <img src="./assets/images/ic-filter.svg" alt="Filer">
+                        </button>
+                        <mat-menu #filterMenu="matMenu" xPosition="before">
+                            <button mat-menu-item>Item 1</button>
+                            <button mat-menu-item>Item 2</button>
+                            <button mat-menu-item>Item 3</button>
+                        </mat-menu>
+                    </div>
+                    <div class="top-content animation-fadeIn">
+                        <h3 class="pb-2 fw-900">1,17,450</h3>
+                        <div class="row">
+                            <div class="col-auto">
+                                <span class="text-grey">Likes / Follows</span>
+                            </div>
+                            <div class="col-auto">
+                                <span class="text-grey">24,932 / 5,724</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="primary-box animation-fadeIn">
+                        <button mat-button [matMenuTriggerFor]="viewsMenu" class="views-dropdown">
+                            <span>views</span>
+                            <img src="./assets/images/ic-down-arrow.svg" alt="Down Arrow">
+                        </button>
+                        <mat-menu #viewsMenu="matMenu" xPosition="before">
+                            <button mat-menu-item>Item 1</button>
+                            <button mat-menu-item>Item 2</button>
+                            <button mat-menu-item>Item 3</button>
+                        </mat-menu>
+                        <img src="./assets/images/monthly-visitor-graph.jpg" alt="Monthly Visitors" class="img-fluid">
+                    </div>
+                    <div class="primary-box country-box mb-0 border-bottom-0 animation-fadeIn">
+                        <h4 class="pb-0">By Country</h4>
+                        <span class="text-grey">Top Users By Country</span>
+                        <img src="./assets/images/country-users-graph.jpg" alt="Users By Country" class="img-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="chart-legend mb-2">
+                                    <span class="light-blue-bg"></span>
+                                    <em>Less users than expected</em>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="chart-legend mb-2">
+                                    <span class="dark-yellow-bg"></span>
+                                    <em>As per expectation users</em>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="chart-legend mb-2">
+                                    <span class="purple-bg"></span>
+                                    <em>More users than expected</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Content End-->
+</div>

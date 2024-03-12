@@ -1,0 +1,10 @@
+/* Import All css here */
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap";
+@import "bootstrap.min.css";
+@import "animations.css";
+@import "jquery.jscrollpane.css";
+@import "style.css";
+@import "dev-style.css";
+
+/* Body Hidden till Load the page */
+body:not(.page-loaded) { opacity: 0; overflow: hidden; }

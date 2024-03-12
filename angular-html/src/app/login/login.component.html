@@ -1,0 +1,47 @@
+<div class="row g-0">
+    <!-- Login Left Start-->
+    <div class="col">
+        <div class="login-left" [@animationIn] [@animationChildIn]>
+            <a href="index.html" title="Company Logo" aria-label="Logo" class="logo animation-fadeIn">
+                <img src="./assets/images/login-logo.png" alt="Company Logo">
+            </a>
+            <form action="#" class="login-form">
+                <h3 class="animation-target">Welcome to Company!</h3>
+                <h5 class="animation-target">Please login to your account</h5>
+                <mat-form-field appearance="outline" class="animation-target">
+                    <img src="./assets/images/ic-user.svg" alt="Username">
+                    <mat-label>Username</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="animation-target">
+                    <img src="./assets/images/ic-password.svg" alt="Password" class="password-icon">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password">
+                </mat-form-field>
+                <div class="middle animation-target">
+                    <a mat-flat-button title="Login" routerLink="/dashboard" color="primary">Login</a>
+                    <a href="#" title="Forgot Password?" class="forgot-link">Forgot Password?</a>
+                </div>
+                <p class="animation-target">Don’t have an account?<a href="#" title="Sign Up">Sign
+                        Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <!-- Login Left End-->
+
+    <!-- Login Right Start-->
+    <div class="col d-none d-sm-block">
+        <div class="login-right">
+            <div class="banner">
+                <img src="./assets/images/login-bg.png" alt="We are here">
+            </div>
+            <div class="content">
+                <h3>We are here!</h3>
+                <p>Lorem ipsum dolor sit amet
+                    concectetur.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Login Right Start-->
+</div>

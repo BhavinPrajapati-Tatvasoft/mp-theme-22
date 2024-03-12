@@ -1,0 +1,121 @@
+<!-- Header Start-->
+<header class="header">
+    <button mat-flat-button class="toggle-btn d-lg-none d-block" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="search-panel">
+        <button mat-flat-button>
+            <img src="./assets/images/ic-search.svg" alt="Search">
+        </button>
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="Search">
+        </mat-form-field>
+    </div>
+    <button mat-button [matMenuTriggerFor]="notificationMenu" class="notification-toggle">
+        <img src="./assets/images/ic-bell.svg" alt="Notifications">
+        <span>2</span>
+    </button>
+    <mat-menu #notificationMenu="matMenu" class="notification-menu" xPosition="before">
+        <p>NOTIFICATION</p>
+        <ul>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-1.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-2.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-3.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-4.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-1.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-2.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification">
+                    <img src="./assets/images/user-3.jpg" alt="User">
+                    <span class="notification-content">
+                        <i>Suzzeth Bungaos tagged you and
+                            18 others in a post</i>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <a href="#" title="Show All" class="show-all">
+            <span>Show All</span>
+            <img src="./assets/images/ic-down-arrow.svg" alt="Show All">
+        </a>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="userMenu" class="user-toggle">
+        <img src="./assets/images/user-profile.jpg" alt="User">
+    </button>
+    <mat-menu #userMenu="matMenu" class="user-menu" xPosition="before">
+        <button mat-menu-item>
+            <img src="./assets/images/profile-icon.svg" alt="Profile">
+            <span>Profile</span>
+        </button>
+        <button mat-menu-item>
+            <img src="./assets/images/setting-icon.svg" alt="Settings">
+            <span>Settings</span>
+        </button>
+        <button mat-menu-item>
+            <img src="./assets/images/change-password-icon.svg" alt="Change Password">
+            <span>Change Password</span>
+        </button>
+        <button mat-menu-item routerLink="/login">
+            <img src="./assets/images/logout-icon-1.svg" alt="Logout">
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+</header>
+<!-- Header End-->
